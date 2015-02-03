@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Top Ten</title>
+	<link rel="stylesheet" href="../css/template.css" />
+	<link rel="stylesheet" href="../css/assign03.css" />
+	
+	<style>
+		header {
+			width: 90%;
+			margin: 0 auto;
+		}
+		.body-wrapper {
+			width: 93%;
+			padding: 1%;
+		}
+
+		h2.title {
+			margin-bottom: 0;
+			font-size: 31px;
+			font-family: "Comfortaa", sans-serif;
+			color: #3D6186;
+		}
+
+		h3.author {
+			margin-top: 0;
+			font-size: 18px;
+			font-family: "Comfortaa", sans-serif;
+			color: #863D3D;
+		}
+
+		.songs {
+			text-align: center;
+		}
+
+		.song .module {
+			min-height: 150px;
+			max-height: 150px;
+			padding: 1%;
+		}
+
+		.song .art {
+			max-width: 12%;
+			vertical-align: middle;
+		}
+
+		.art img {
+			width: 151px;
+			height: 151px;
+		}
+
+		.song .rank {
+			font-size: 80px;
+			/*min-width: 8%;*/
+			min-height: 100px;
+			min-width: 7%;
+			line-height: 100px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.song .info {
+			max-width: 55%;
+			text-align: left;
+		}
+
+		.song .play {
+			width: 9%;
+			min-height: 100px;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.play-button {
+			background: url(../images/play.png) no-repeat left;
+			background-size: 200%;
+			width: 100px;
+			height: 100px;
+			border: 0;
+		}
+
+		.pause-button {
+			background: url(../images/pause.png) no-repeat left;
+			background-size: 200%;
+		}
+
+		.play-button:hover,
+		.pause-button:hover {
+			background-position: right;
+			cursor: pointer;
+		}
+		.play-button:focus,
+		.pause-button:focus {
+			outline: none;
+		}
+
+		.playing {
+			background-color: #2F538B;
+			-webkit-transition: background-color 600ms linear;
+			-moz-transition: background-color 600ms linear;
+			-o-transition: background-color 600ms linear;
+			-ms-transition: background-color 600ms linear;
+			transition: background-color 600ms linear;
+		}
+
+		.quick-link li {
+			font-size: 19px;
+			width: 200px;
+		}
+
+		@media screen and (max-width: 1300px) {
+			.song .info {
+				max-width: 50%;
+			}
+		}
+	</style>
+
+	<script src="../js/assign03.js"></script>
+</head>
+<body onload="main();" >
+	<header>
+		<h1 id="logo" class="logo">
+			<a style="color: #FFFFFF; text-decoration: none;" href="assign03.html">Billboard Top Ten</a>
+		</h1>
+		<nav id="main-nav">
+			<ul>
+				<li class="first">
+					<a href="#">Top Ten</a>
+					<ul>
+						<li class="first"><a href="#one">Uptown Funk!</a></li>
+						<li><a href="#two">Thinking Out Loud</a></li>
+						<li><a href="#three">Blank Space</a></li>
+						<li><a href="#four">Take Me To Church</a></li>
+						<li><a href="#five">Shake It Off</a></li>
+						<li><a href="#six">Lips Are Movin</a></li>
+						<li><a href="#seven">I'm Not The Only One</a></li>
+						<li><a href="#eight">Sugar</a></li>
+						<li><a href="#nine">Jealous</a></li>
+						<li class="last"><a href="#ten">All About That Bass</a></li>
+					</ul>
+				</li>
+				<li><a href="secondary/assign03-info.html">Song Info</a></li>
+				<li><a href="secondary/assign03-contact.html">Contact Us</a></li>
+				<li class="last"><a href="secondary/assign03-about.html">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="body-wrapper">
+		<div class="songs">
+			<div id="one" class="song">
+				<div class="module rank">1</div>
+				<div class="module art">
+					<img src="../images/album_art/funk.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Uptown Funk!</h2>
+					<h3 class="author">Mark Ronson</h3>
+					<p class="description">
+						Mark Ronson is a sought-after turntablist who's worked with such diverse 
+						artists as Macy Gray, Jay-Z, and comedian Jimmy Fallon. The stepson of 
+						guitarist Mick Jones of Foreigner, Ronson spent the first eight years of 
+						his life growing up in England... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-one" src="../files/uptown.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="two" class="song">
+				<div class="module rank">2</div>
+				<div class="module art">
+					<img src="../images/album_art/think.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Thinking Out Loud</h2>
+					<h3 class="author">Ed Sheeran</h3>
+					<p class="description">
+						Flame-haired singer/songwriter, beatboxer, and guitarist Ed Sheeran's 
+						eclectic blend of acoustic pop, folk, and hip-hop has been championed by 
+						everyone from the underground grime scene to American Oscar winners... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-two" src="../files/loud.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="three" class="song">
+				<div class="module rank">3</div>
+				<div class="module art">
+					<img src="../images/album_art/blank-space.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Blank Space</h2>
+					<h3 class="author">Taylor Swift</h3>
+					<p class="description">
+						Taylor Swift is that rarest of pop phenomenona: a superstar who managed 
+						to completely cross over from country to the mainstream. Other singers 
+						performed similar moves -- notably, Dolly Parton and Willie Nelson both 
+						became enduring mainstream icons... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-three" src="../files/blank.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="four" class="song">
+				<div class="module rank">4</div>
+				<div class="module art">
+					<img src="../images/album_art/hozier.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Take Me To Church</h2>
+					<h3 class="author">Hozier</h3>
+					<p class="description">
+						A unique and intelligent singer, songwriter, and multi-instrumentalist 
+						who cites James Joyce's Portrait of an Artist as a Young Man, Leonard 
+						Cohen, John Lee Hooker, and community choral singing among his 
+						influences, Hozier (his stage and performing name)... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-four" src="../files/church.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="five" class="song">
+				<div class="module rank">5</div>
+				<div class="module art">
+					<img src="../images/album_art/blank-space.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Shake it Off</h2>
+					<h3 class="author">Taylor Swift</h3>
+					<p class="description">
+						Taylor Swift is that rarest of pop phenomenona: a superstar who managed 
+						to completely cross over from country to the mainstream. Other singers 
+						performed similar moves -- notably, Dolly Parton and Willie Nelson both 
+						became enduring mainstream icons... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-five" src="../files/shake.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="six" class="song">
+				<div class="module rank">6</div>
+				<div class="module art">
+					<img src="../images/album_art/lips.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Lips Are Movin</h2>
+					<h3 class="author">Meghan Trainor</h3>
+					<p class="description">
+						Pop singer and songwriter Meghan Trainor had already devoted most of her 
+						life to music when she scored her first hit in 2014 (when she was 20 
+						years old) with a dance-friendly paean to body positivity, "All About 
+						That Bass."... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-six" src="../files/lips.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="seven" class="song">
+				<div class="module rank">7</div>
+				<div class="module art">
+					<img src="../images/album_art/one.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">I'm Not The Only One</h2>
+					<h3 class="author">Sam Smith</h3>
+					<p class="description">
+						Smith was born in London, England, the son of Kate Cassidy and Frederick 
+						Smith. He is an alumnus of Youth Music Theatre UK and starred in their 
+						2007 production of "Oh! Carol". Before entering the musical theatre, 
+						Smith had been in jazz bands... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-seven" src="../files/not_only.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="eight" class="song">
+				<div class="module rank">8</div>
+				<div class="module art">
+					<img src="../images/album_art/sugar.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Sugar</h2>
+					<h3 class="author">Maroon 5</h3>
+					<p class="description">
+						A mix of polished pop/rock and neo-soul made Maroon 5 one of the most 
+						popular bands of the new millennium, with songs like "This Love," "She 
+						Will Be Loved," and "Makes Me Wonder" all topping the charts worldwide. 
+						Previously, bandmates... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-eight" src="../files/sugar.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="nine" class="song">
+				<div class="module rank">9</div>
+				<div class="module art">
+					<img src="../images/album_art/jealous.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">Jealous</h2>
+					<h3 class="author">Nick Jonas</h3>
+					<p class="description">
+						As the unspoken leader of the Jonas Brothers, Nick Jonas attracted 
+						legions of young fans with his fizzy, Disney-approved pop songs. The New 
+						Jersey native wasn't the group's only frontman -- he shared that role 
+						with his older brother, Joe -- but he was... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-nine" src="../files/jealous.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+			<div id="ten" class="song">
+				<div class="module rank">10</div>
+				<div class="module art">
+					<img src="../images/album_art/bass.jpg" alt="Album Art">
+				</div>
+				<div class="module info">
+					<h2 class="title">All About that Bass</h2>
+					<h3 class="author">Meghan Trainor</h3>
+					<p class="description">
+						Pop singer and songwriter Meghan Trainor had already devoted most of her 
+						life to music when she scored her first hit in 2014 (when she was 20 
+						years old) with a dance-friendly paean to body positivity, "All About 
+						That Bass."... 
+						<a href="assign03-1.html">Learn More</a>
+					</p>
+				</div>
+				<div class="module play">
+					<audio id="song-ten" src="../files/bass.mp3"></audio>
+					<button class="play-button"></button>
+				</div>
+			</div> <!-- end of song -->
+		</div> <!-- end of songs -->
+	</div> <!-- end of body-wrapper -->
+</body>
+</html>

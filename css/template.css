@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+body {
+	background: #222;
+	margin: 0;
+	font-family: Georgia, serif;
+}
+
+#logo a {
+	color: #FFFFFF;
+	font: 900 50px "Comfortaa", sans-serif;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+}
+
+caption {
+	font: 900 30px Impact, Charcoal, sans-serif;
+	margin-bottom: 20px;;
+}
+
+th,
+td {
+	border-bottom: 1px solid #222;
+	padding: 10px 0;
+}
+
+a {
+	color: #4472B9;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+header a {
+	font-size: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/*font-family: Impact, Charcoal, sans-serif;*/
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-bottom: 10px;
+}
+
+p {
+	font: 500 normal 19px 'Josefin Sans', sans-serif;
+	color: #333333;
+}
+
+input[type=text],
+input[type=email] {
+	padding: 5px 10px;
+	width: 215px;
+	margin: 5px 0;
+}
+
+textarea {
+	width: 100%;
+	height: 80px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+	font: 500 normal 15px sans-serif;
+}
+
+label {
+	font-weight: 900;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button],
+button,
+.button {
+	display: inline-block;
+	font-family: Georgia, sans-serif;
+	color: white;
+	background: #4472B9;
+	padding: 9px 16px !important;
+	border: 0;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:hover,
+.button:hover {
+	background: #29446e;
+	cursor: pointer;
+}
+
+#main-nav {
+	background: #333;
+}
+#main-nav > ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#main-nav > ul ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	background: #333;
+	padding: 0;
+	width: 190px;
+	padding: 10px 5px 5px;
+	text-align: left;
+}
+#main-nav > ul > li.first:hover ul {
+	display: inline-block;
+}
+#main-nav li {
+	position: relative;
+	display: inline-block;
+	list-style-type: none;
+}
+#main-nav li li {
+	display: block;
+}
+#main-nav li li a {
+	display: block;
+	padding: 4px 10px;
+	font-size: 16px;
+}
+#main-nav a {
+	display: inline-block;
+	color: #FFFFFF;
+	font: 900 20px "Comfortaa", sans-serif;
+	text-decoration: none;
+	padding: 15px 25px;
+}
+#main-nav a:hover {
+	color: #333;
+	background: #eee;
+}
+#main-nav.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.body-wrapper {
+	background: #eee;
+	color: #222;
+	width: 75%;
+	margin: 0 auto;
+	padding: 2%;
+}
+
+.module {
+	background: white;
+	padding: 3%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	display: inline-block;
+	margin: 1%;
+	vertical-align: top;
+}
+.module > *:first-child {
+	margin-top: 0;
+}
+.module > *:last-child {
+	margin-bottom: 0;
+}
+
+.float-left {
+	float: left;
+}
+.float-content:after {
+	display: block;
+	content: " ";
+	height: 0;
+	clear: both;
+}
+
+.block {
+	display: block;
+}
+
+.group {
+	margin: 0 0 15px;
+}
+
+.left,
+.right {
+	display: inline-block;
+	width: 45%;
+}
+
+.right {
+	margin-left: 8%;
+	vertical-align: top;
+}
+
+.horizontal label {
+	width: 100px;
+	display: inline-block;
+}

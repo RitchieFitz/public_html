@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700);
+
+header {
+	width: 90%;
+	margin: 0 auto;
+}
+.body-wrapper {
+	width: 93%;
+	padding: 1%;
+}
+
+h2.title {
+	margin-bottom: 0;
+	font-size: 31px;
+	font-family: "Comfortaa", sans-serif;
+	color: #3D6186;
+}
+
+h3.author {
+	margin-top: 0;
+	font-size: 18px;
+	font-family: "Comfortaa", sans-serif;
+	color: #863D3D;
+}
+
+.songs {
+	text-align: center;
+}
+
+.song .module {
+	min-height: 150px;
+	max-height: 150px;
+	padding: 1%;
+}
+
+.song .art {
+	max-width: 12%;
+	vertical-align: middle;
+}
+
+.art img {
+	width: 151px;
+	height: 151px;
+}
+
+.song .rank {
+	font-size: 80px;
+	/*min-width: 8%;*/
+	min-height: 100px;
+	min-width: 7%;
+	line-height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	background: #E8D2D2;
+}
+
+.song .info {
+	max-width: 55%;
+	text-align: left;
+}
+
+.song .play {
+	width: 9%;
+	min-height: 100px;
+	vertical-align: middle;
+	text-align: center;
+	background: #D2D3E8;
+}
+
+.play-button {
+	background: url(../images/play.png) no-repeat left;
+	background-size: 200%;
+	width: 100px;
+	height: 100px;
+	border: 0;
+}
+
+.pause-button {
+	background: url(../images/pause.png) no-repeat left;
+	background-size: 200%;
+}
+
+.play-button:hover,
+.pause-button:hover {
+	background-position: right;
+	cursor: pointer;
+}
+.play-button:focus,
+.pause-button:focus {
+	outline: none;
+}
+
+.playing {
+	background-color: #2F538B;
+	-webkit-transition: background-color 600ms linear;
+	-moz-transition: background-color 600ms linear;
+	-o-transition: background-color 600ms linear;
+	-ms-transition: background-color 600ms linear;
+	transition: background-color 600ms linear;
+}
+
+.quick-link li {
+	font-size: 19px;
+	width: 200px;
+}
