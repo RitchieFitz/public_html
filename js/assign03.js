@@ -45,7 +45,7 @@ function fixNav() {
 	});
 
 	var checkScroll = function () {
-		var scrollPosition = document.body.scrollTop;
+		var scrollPosition = document.documentElement.scrollTop;
 		var mainNav = $("#main-nav")[0];
 		var navClass = mainNav.className;
 
@@ -98,7 +98,7 @@ function setInternalAnchors() {
 		anchors[i].addEventListener("click", function () {
 			setTimeout( function() {
 				console.log("Before: " + document.body.scrollTop);
-				document.body.scrollTop -= 50;
+				document.documentElement.scrollTop -= 50;
 				console.log("After: " + document.body.scrollTop);
 			}, 1);
 		});

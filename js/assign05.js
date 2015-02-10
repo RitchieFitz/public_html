@@ -1,6 +1,6 @@
 /*************************************************************************
  * $
- * This lets me select any element by using a CSS query.
+ * This lets me select any element by using CSS selectors.
  *************************************************************************/
  function $(selector)
  {
@@ -52,7 +52,7 @@
  function clearChecks()
  {
 	// This will select all enabled inputs.
-	var elements = $("form input[type*=text]:enabled");
+	var elements = $("form input[type*=text]:enabled, form textarea");
 
 	// Remove success or error from each element.
 	for (i = 0; i < elements.length; i++)
@@ -118,63 +118,44 @@
 	}
 
 	// Position message element correctly.
-	nodeMess.style.right = (nodeMess.offsetWidth * -1) - 20 + "px";
+	nodeMess.style.right = (nodeMess.offsetWidth * -1) - 5 + "px";
 
 	setTimeout( function()
 	{
-		nodeMess.style.right = "-" + (nodeMess.offsetWidth + 20) + "px";
+		nodeMess.style.right = "-" + (nodeMess.offsetWidth + 5) + "px";
 	}, 10);
 }
 
-/*************************************************************************
- * UPDATE
- * This checks the inputs and make sure they are not empty or contain any
- * errors before updating.
- *************************************************************************/
- function update() {
-	// Input Values
-	var aprV = $("#apr")[0].value;
-	var termV = $("#loan-term")[0].value;
-	var amountV = $("#loan-amount")[0].value;
-
-	// Input Classes
-	var aprCN = $("#apr")[0].className;
-	var termCN = $("#loan-term")[0].className;
-	var amountCN = $("#loan-amount")[0].className;	
-
-	// Check if fields are empty.
-	if (aprV != "" && termV != "" && amountV != "")
+function checkCard(element) {
+	if (element.value == "")
 	{
-		// Check if any fields contain any errors.
-		if (!contains(aprCN, "error") && !contains(termCN, "error") && !contains(amountCN, "error"))
-		{
-			calculate(aprV, termV, amountV);
-		}
-		else
-		{
-			$("#payment")[0].value = "Fix Errors";
-		}
+		inputStatus(element, "error", "Error: cannot leave empty");
+		element.focus();
 	}
-	else
-	{
-		$("#payment")[0].value = "Fill in fields";
+	else if (!/\d{16}/.test(element.value)) {
+		inputStatus(element, "error", "Error: must contain 16 digits");
+	}
+	else {
+		inputStatus(element, "success", "Success");
 	}
 }
 
-/*************************************************************************
- * CHECK INPUT
- * This validates the input field, and will update the input status
- * accordingly.
- *************************************************************************/
- function checkInput(element)
- {
-	// Make sure the value is a numeric value, and that it is not
-	// empty.
-	if (isNaN(element.value) == true)
+function checkPhone(element) {
+	if (element.value == "")
 	{
-		inputStatus(element, "error", "Error: contains non-digit");
+		inputStatus(element, "error", "Error: cannot leave empty");
+		element.focus();
 	}
-	else if (element.value == "")
+	else if (!/\d{3}-\d{3}-\d{4}/.test(element.value)) {
+		inputStatus(element, "error", "Error: format must be 123-456-7890");
+	}
+	else {
+		inputStatus(element, "success", "Success");
+	}
+}
+
+function checkTextarea(element) {
+	if (element.value == "")
 	{
 		inputStatus(element, "error", "Error: cannot leave empty");
 		element.focus();
@@ -182,43 +163,101 @@
 	else {
 		inputStatus(element, "success", "Success");
 	}
-
-	// This will update the monthly payment if all fields are filled in
-	// and don't contain any errors.
-	update();
 }
 
-/*************************************************************************
- * CALCULATE
- * This will calculate the monthly payment and update the disabled text
- * field.
- *************************************************************************/
- function calculate(apr, term, amount)
- {
- 	var monthlyPayment = 0;
- 	var numPayments = term * 12;
- 	var mRate = (apr/100) / 12;
- 	var tmp = Math.pow(1 + mRate, numPayments);
+function checkForText(element) {
+	if (element.value == "")
+	{
+		inputStatus(element, "error", "Error: cannot leave empty");
+		element.focus();
+	}
+	else if (/\d/.test(element.value))
+	{
+		inputStatus(element, "error", "Error: contains digit");
+	}
+	else {
+		inputStatus(element, "success", "Success");
+	}
+}
 
- 	if (mRate != 0)
- 	{
- 		monthlyPayment = amount * (mRate * tmp / (tmp - 1));
- 	}
- 	else
- 	{
- 		monthlyPayment = amount / numPayments;
- 	}
+function checkboxSettings() {
+	var sum = 0;
+	
+	var checkboxes = document.forms[0]["product"];
 
- 	monthlyPayment = monthlyPayment.toFixed(2);
- 	$("#payment")[0].value = "$" + monthlyPayment;
- }
+	for (var i = 0; i < checkboxes.length; i++) {
+		
+		checkboxes[i].addEventListener("change", function () {
+
+			var curr_checkboxes = $("[name*=product]:checked");
+
+			for (var i = 0; i < curr_checkboxes.length; i++) {
+				sum += curr_checkboxes[i].value * 1;
+			}
+
+			changeContent($(".price")[0], "$" + sum);
+			sum = 0;
+
+		});
+	}
+}
+
+function radioSettings() {
+	var cardTypes = $("[name*=credit-type]");
+	var message = $(".credit-provider .block-message")[0];
+
+	for (var i = 0; i < cardTypes.length; i++) {
+		cardTypes[i].addEventListener("change", function () {
+			addClass(message, "success");
+			changeContent(message, "Success");
+		});
+	}	
+}
+
+function autoFillSettings() {
+	$("#first")[0].value = "Ritchie";
+	$("#last")[0].value = "Fitzgerald";
+	$("#address")[0].value = "455 W. 5th S.\nRexburg, ID\n83440";
+	$("#phone")[0].value = "208-881-1252";
+	$("[name*=credit-type]")[1].checked = true;
+	$("#card-number")[0].value = "3452137896574532";
+}
+
+function validate() {
+
+	var textInputs = $("[type*=text], textarea");
+
+	for (var i = 0; i < textInputs.length; i++) {
+		if (textInputs[i].value == "")
+		{
+			inputStatus(textInputs[i], "error", "Error: cannot leave empty");
+			textInputs[i].focus();
+			return false;
+		}
+	}
+
+	if ($("[name*=credit-type]:checked").length < 1) {
+		var firstType = $("[name*=credit-type]")[0];
+		var message = $(".credit-provider .block-message")[0];
+
+		addClass(message, "error");
+		changeContent(message, "Error: must choose type");
+		firstType.focus();
+
+		return false;
+	}
+
+	return true;
+}
 
 /*************************************************************************
  * MAIN
  * Run when page loads.
  *************************************************************************/
-function main()
-{
+ function main()
+ {
 	// Set focus on APR when page loads.
-	$("#apr")[0].focus();
+	document.getElementById("first").focus();
+	checkboxSettings();
+	radioSettings();
 }

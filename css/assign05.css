@@ -4,8 +4,27 @@
 }
 
 form {
-	display: inline-block;
+	display: block;
 	text-align: left;
+}
+table {
+	width: 100%;
+}
+
+.details,
+.product-table {
+	display: inline-block;
+	vertical-align: top;
+}
+.product-table {
+	margin-left: 21%;
+	width: 43%;
+}
+
+.details h2 {
+	font: 900 30px Impact, Charcoal, sans-serif;
+	margin: 0 0 29px;
+	text-align: center;
 }
 
 .horizontal label {
@@ -15,10 +34,23 @@ form {
 .input-group {
 	position: relative;
 }
+.input-group.textbox textarea {
+	width: 235px;
+}
+.input-group.textbox label {
+	vertical-align: top;
+}
+
+.total-group {
+	text-align: center;
+	margin: 15px;
+}
+
 
 .message {
 	position: absolute;
-	top: 9px;
+	top: 12px;
+	font-size: 14px;
 }
 
 .error-input {
@@ -32,4 +64,15 @@ form {
 }
 .success {
 	color: #5EA862;
+}
+
+.total {
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.price {
+	color: #5EA862;
+	font-size: 25px;
+	font-weight: 900;
 }

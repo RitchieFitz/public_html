@@ -86,7 +86,7 @@ label {
 input[type=submit],
 input[type=reset],
 input[type=button],
-button,
+/*button,*/
 .button {
 	display: inline-block;
 	font-family: Georgia, sans-serif;
@@ -101,7 +101,7 @@ button,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
-button:hover,
+/*button:hover,*/
 .button:hover {
 	background: #29446e;
 	cursor: pointer;
@@ -127,7 +127,7 @@ button:hover,
 	text-align: left;
 }
 #main-nav > ul > li.first:hover ul {
-	display: inline-block;
+	display: block;
 }
 #main-nav li {
 	position: relative;
