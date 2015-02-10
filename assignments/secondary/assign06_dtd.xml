@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE bsa SYSTEM "assign06.dtd">
+
+<!-- bsa>council[name="Teton Area"]*2>troop[troop-number="462"][unit-name="Heros"]*3>scout*3>firstname{Richard}+lastname{Henke}+phone{123-456-7810}+address>street{123 RD}+city{Rexburg}+state{ID}^rank[date-earned="Apr 02, 2013"]{Tenderfoot}*3+meritbadge[date-earned="Apr 02, 2013"]*3 -->
+
+<bsa>
+	<council name="Grand Teton Area">
+		<troop troop-number="462" unit-name="Heros">
+			<scout>
+				<firstname>Richard</firstname>
+				<lastname>Henke</lastname>
+				<phone>123-456-7889</phone>
+				<address>
+					<street>123 RD</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+			<scout>
+				<firstname>Ritchie</firstname>
+				<lastname>Fitzgerald</lastname>
+				<phone>123-456-7810</phone>
+				<address>
+					<street>1234 RD</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+			<scout>
+				<firstname>Ryan</firstname>
+				<lastname>Allred</lastname>
+				<phone>123-456-7811</phone>
+				<address>
+					<street>1235 RD</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+		</troop>
+		<troop troop-number="463" unit-name="Villans">
+			<scout>
+				<firstname>Max</firstname>
+				<lastname>Clements</lastname>
+				<phone>123-456-7812</phone>
+				<address>
+					<street>666 RD</street>
+					<city>Rigby</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+			<scout>
+				<firstname>Richard</firstname>
+				<lastname>Henke</lastname>
+				<phone>123-456-7813</phone>
+				<address>
+					<street>6667 RD</street>
+					<city>Rigby</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+			<scout>
+				<firstname>Richard</firstname>
+				<lastname>Henke</lastname>
+				<phone>123-456-7814</phone>
+				<address>
+					<street>6668 RD</street>
+					<city>Rigby</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="Apr 02, 2013">Tenderfoot</rank>
+				<rank date-earned="Jun 02, 2014">2ndClass</rank>
+				<rank date-earned="Dec 15, 2014">1stClass</rank>
+				<meritbadge date-earned="Apr 02, 2013">Camping</meritbadge>
+				<meritbadge date-earned="Mar 02, 2013">Cooking</meritbadge>
+				<meritbadge date-earned="May 02, 2013">Safety</meritbadge>
+				<meritbadge date-earned="Jun 02, 2013">First Aid</meritbadge>
+			</scout>
+		</troop>
+	</council>
+</bsa>
