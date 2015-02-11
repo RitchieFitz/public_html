@@ -127,11 +127,31 @@
 }
 
 /*************************************************************************
+ * IS EMPTY
+ * If input element is empty it notifies user that field needs to be filled
+ * out and returns true. If there is a value it returns false.
+ *************************************************************************/
+function isEmpty(element)
+{
+	if (element.value == "")
+	{
+		inputStatus(element, "error", "Error: cannot leave empty");
+		element.focus();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+/*************************************************************************
  * UPDATE
  * This checks the inputs and make sure they are not empty or contain any
  * errors before updating.
  *************************************************************************/
- function update() {
+ function update()
+ {
 	// Input Values
 	var aprV = $("#apr")[0].value;
 	var termV = $("#loan-term")[0].value;
@@ -142,22 +162,34 @@
 	var termCN = $("#loan-term")[0].className;
 	var amountCN = $("#loan-amount")[0].className;	
 
-	// Check if fields are empty.
-	if (aprV != "" && termV != "" && amountV != "")
+	if(isEmpty($("#apr")[0])) return;
+	if(isEmpty($("#loan-term")[0])) return;
+	if(isEmpty($("#loan-amount")[0])) return;
+
+	// Check if any fields contain any errors.
+	if (!contains(aprCN, "error") && !contains(termCN, "error") && !contains(amountCN, "error"))
 	{
-		// Check if any fields contain any errors.
-		if (!contains(aprCN, "error") && !contains(termCN, "error") && !contains(amountCN, "error"))
-		{
-			calculate(aprV, termV, amountV);
-		}
-		else
-		{
-			$("#payment")[0].value = "Fix Errors";
-		}
+		calculate(aprV, termV, amountV);
 	}
 	else
 	{
-		$("#payment")[0].value = "Fill in fields";
+		$("#payment")[0].value = "Fix Errors";
+	}
+}
+
+/*************************************************************************
+ * CHECK UPDATE
+ * This will update monthly payment only if all input fields are filled.
+ *************************************************************************/
+function checkUpdate()
+{
+	// Collect input fields.
+	var inputs = $("#apr, #loan-term, #loan-amount");
+
+	// Make sure they all contain values.
+	if (inputs[0].value != "" && inputs[1].value != "" && inputs[2].value != "")
+	{
+		update();
 	}
 }
 
@@ -185,7 +217,8 @@
 
 	// This will update the monthly payment if all fields are filled in
 	// and don't contain any errors.
-	update();
+	checkUpdate();
+
 }
 
 /*************************************************************************
@@ -217,8 +250,8 @@
  * MAIN
  * Run when page loads.
  *************************************************************************/
-function main()
-{
+ function main()
+ {
 	// Set focus on APR when page loads.
 	$("#apr")[0].focus();
 }
