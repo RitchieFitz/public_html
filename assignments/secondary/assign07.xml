@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="assign07.xsl" ?>
+<!DOCTYPE bsa SYSTEM "assign06.dtd">
+
+<bsa>
+  <council name="Teton Area">
+    <troop troopNumber="462" unitName="Heros">
+      <scout>
+        <firstName>Joe</firstName>
+        <lastName>Brubaker</lastName>
+        <phone>234-666-9876</phone>
+        <address>
+          <street>Lovers Lane</street>
+          <city>Rigby</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Nov 21, 2012">Tenderfoot</rank>
+        <meritbadge date-earned="Feb 21, 2012">Personal Management</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Ritchie</firstName>
+        <lastName>Fitzgerald</lastName>
+        <phone>208-356-5875</phone>
+        <address>
+          <street>2626 W. 5200 S.</street>
+          <city>Rexburg</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Apr 05, 2001">Tenderfoot</rank>
+        <rank date-earned="Oct 09, 2002">2nd Class</rank>
+        <rank date-earned="July 14, 2003">1st Class</rank>
+        <rank date-earned="Feb 02, 2004">Star</rank>
+        <rank date-earned="Sep 13, 2005">Life</rank>
+        <rank date-earned="Apr 21, 2006">Eagle</rank>
+        <meritbadge date-earned="Apr 05, 2000">Computers</meritbadge>
+        <meritbadge date-earned="Jun 06, 2000">Orienteering</meritbadge>
+        <meritbadge date-earned="Jul 07, 2000">Cycling</meritbadge>
+        <meritbadge date-earned="Aug 08, 2000">Sculpting</meritbadge>
+        <meritbadge date-earned="Sep 09, 2000">Art</meritbadge>
+        <meritbadge date-earned="Oct 10, 2000">Surveying</meritbadge>
+        <meritbadge date-earned="Nov 11, 2000">Engineering</meritbadge>
+        <meritbadge date-earned="Dec 12, 2000">Environmental Science</meritbadge>
+        <meritbadge date-earned="Jan 13, 2001">Communications</meritbadge>
+        <meritbadge date-earned="Feb 14, 2001">Family Life</meritbadge>
+        <meritbadge date-earned="March 15, 2001">Camping</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Super</firstName>
+        <lastName>Man</lastName>
+        <phone>111-111-1111</phone>
+        <address>
+          <street>Candyland dr.</street>
+          <city>Teton</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Jan 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Feb 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Animal Science</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Theater</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Music</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Animal Science</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Bat</firstName>
+        <lastName>Man</lastName>
+        <phone>999-999-9999</phone>
+        <address>
+          <street>Awesome</street>
+          <city>Gotham City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Animal Science</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Theater</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Music</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Spider</firstName>
+        <lastName>Man</lastName>
+        <phone>888-888-8888</phone>
+        <address>
+          <street>Spidey</street>
+          <city>New York City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <meritbadge date-earned="Dec 1, 2011">Rifle Shooting</meritbadge>
+      </scout>
+    </troop>
+    <troop troopNumber="666" unitName="Villans">
+      <scout>
+        <firstName>Venom</firstName>
+        <lastName>Man</lastName>
+        <phone>666-666-6666</phone>
+        <address>
+          <street>Non-Spidey</street>
+          <city>New York City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Animal Science</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Theater</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Music</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Penguin</firstName>
+        <lastName>Man</lastName>
+        <phone>555-555-5555</phone>
+        <address>
+          <street>Non-Awesome</street>
+          <city>Gotham City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Art</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Graphic Arts</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Joker</firstName>
+        <lastName>Man</lastName>
+        <phone>222-222-2222</phone>
+        <address>
+          <street>Joke st.</street>
+          <city>New York City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Orienteering</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Climbing</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Photography</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Riddler</firstName>
+        <lastName>Man</lastName>
+        <phone>333-333-3333</phone>
+        <address>
+          <street>Wayne Manor</street>
+          <city>Gotham City</city>
+          <state>USA</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Personal Management</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Inventing</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Crime Prevention</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Green</firstName>
+        <lastName>Goblin</lastName>
+        <phone>444-444-4444</phone>
+        <address>
+          <street>Green st.</street>
+          <city>New York City</city>
+          <state>ID</state>
+        </address>
+        <rank date-earned="Apr 05, 2000">Tenderfoot</rank>
+        <rank date-earned="Jun 09, 2001">2nd Class</rank>
+        <rank date-earned="July 14, 2002">1st Class</rank>
+        <rank date-earned="Mar 02, 2003">Star</rank>
+        <rank date-earned="Sep 13, 2005">Life</rank>
+        <meritbadge date-earned="Apr 05, 2000">Camping</meritbadge>
+        <meritbadge date-earned="Jun 06, 2000">Environmental Science</meritbadge>
+        <meritbadge date-earned="Jul 07, 2000">Communcations</meritbadge>
+        <meritbadge date-earned="Aug 08, 2000">Emergency Preparedness</meritbadge>
+        <meritbadge date-earned="Sep 09, 2000">Art</meritbadge>
+        <meritbadge date-earned="Oct 10, 2000">Citizenship in the Nation</meritbadge>
+        <meritbadge date-earned="Nov 11, 2000">Citizenship in the World</meritbadge>
+        <meritbadge date-earned="Dec 12, 2000">Journalism</meritbadge>
+        <meritbadge date-earned="Jan 13, 2001">Coin Collecting</meritbadge>
+        <meritbadge date-earned="Mar 14, 2001">Family Life</meritbadge>
+      </scout>
+    </troop>
+  </council>
+  <council name="Empire">
+    <troop troopNumber="333" unitName="Good Guys">
+      <scout>
+        <firstName>Obi-One</firstName>
+        <lastName>Kenobi</lastName>
+        <phone>123-456-7890</phone>
+        <address>
+          <street>Heart Break dr.</street>
+          <city>Dirty</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Medicine</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Crime Prevention</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Disabilities Awareness</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Anakin</firstName>
+        <lastName>Skywalker</lastName>
+        <phone>098-765-4321</phone>
+        <address>
+          <street>Force ln.</street>
+          <city>Dirty</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Space Exploration</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Aviation</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Lifesaving</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Princess</firstName>
+        <lastName>Lea</lastName>
+        <phone>777-777-7777</phone>
+        <address>
+          <street>Love st.</street>
+          <city>Naboo</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Space Exploration</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Aviation</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Lifesaving</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Han</firstName>
+        <lastName>Solo</lastName>
+        <phone>654-543-2109</phone>
+        <address>
+          <street>Awesome</street>
+          <city>Dirty</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Cycling</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Sports</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Lifesaving</meritbadge>
+      </scout>
+      <scout>
+        <firstName>R2</firstName>
+        <lastName>D2</lastName>
+        <phone>101-010-1010</phone>
+        <address>
+          <street>Robot</street>
+          <city>Empire</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Personal Management</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Sports</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Lifesaving</meritbadge>
+      </scout>
+    </troop>
+    <troop troopNumber="890" unitName="Bad Guys">
+      <scout>
+        <firstName>Darth</firstName>
+        <lastName>Mall</lastName>
+        <phone>456-789-3456</phone>
+        <address>
+          <street>Bad st.</street>
+          <city>Empire</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Hiking</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Camping</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Rowing</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Jaba</firstName>
+        <lastName>Hut</lastName>
+        <phone>000-000-0000</phone>
+        <address>
+          <street>Ugly st.</street>
+          <city>Dirty</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Space Exploration</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Astronomy</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Nuclear Science</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Darth</firstName>
+        <lastName>Vader</lastName>
+        <phone>678-345-1234</phone>
+        <address>
+          <street>Hate st.</street>
+          <city>Empire</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <rank date-earned="Mar 3, 2012">1st Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Hiking</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Camping</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Cooking</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Count</firstName>
+        <lastName>Duko</lastName>
+        <phone>876-456-3456</phone>
+        <address>
+          <street>Evil st.</street>
+          <city>Empire</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Camping</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Hiking</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Emper</firstName>
+        <lastName>Or</lastName>
+        <phone>876-987-3456</phone>
+        <address>
+          <street>123 Win st.</street>
+          <city>Empire</city>
+          <state>Tatooine</state>
+        </address>
+        <rank date-earned="Dec 1, 2011">Tenderfoot</rank>
+        <rank date-earned="Jan 2, 2012">2nd Class</rank>
+        <meritbadge date-earned="Mar 3, 2012">Camping</meritbadge>
+        <meritbadge date-earned="Mar 3, 2012">Hiking</meritbadge>
+      </scout>
+    </troop>
+  </council>
+</bsa>

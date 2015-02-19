@@ -126,13 +126,20 @@
 	}, 10);
 }
 
+/*************************************************************************
+ * CHECK CARD
+ * This function makes sure that the credit card field is not empty, and 
+ * that it contains a 16 digit input.
+ *************************************************************************/
 function checkCard(element) {
 	if (element.value == "")
 	{
+		// If field is left blank alert user.
 		inputStatus(element, "error", "Error: cannot leave empty");
 		element.focus();
 	}
 	else if (!/\d{16}/.test(element.value)) {
+		// If field is not a 16 digit input alert user.
 		inputStatus(element, "error", "Error: must contain 16 digits");
 	}
 	else {
@@ -140,13 +147,20 @@ function checkCard(element) {
 	}
 }
 
+/*************************************************************************
+ * CHECK PHONE
+ * This function makes sure that the phone number field is not empty, and 
+ * that it matches a specified input.
+ *************************************************************************/
 function checkPhone(element) {
 	if (element.value == "")
 	{
+		// If field is left blank alert user.
 		inputStatus(element, "error", "Error: cannot leave empty");
 		element.focus();
 	}
 	else if (!/\d{3}-\d{3}-\d{4}/.test(element.value)) {
+		// If field does not match pattern alert user.
 		inputStatus(element, "error", "Error: format must be 123-456-7890");
 	}
 	else {
@@ -154,9 +168,14 @@ function checkPhone(element) {
 	}
 }
 
+/*************************************************************************
+ * CHECK TEXT AREA
+ * This function makes sure that the textarea field is not empty.
+ *************************************************************************/
 function checkTextarea(element) {
 	if (element.value == "")
 	{
+		// If field is left blank alert user.
 		inputStatus(element, "error", "Error: cannot leave empty");
 		element.focus();
 	}
@@ -165,14 +184,20 @@ function checkTextarea(element) {
 	}
 }
 
+/*************************************************************************
+ * CHECK FOR TEXT
+ * This function makes sure that the input text field is not empty.
+ *************************************************************************/
 function checkForText(element) {
 	if (element.value == "")
 	{
+		// If field is left blank alert user.
 		inputStatus(element, "error", "Error: cannot leave empty");
 		element.focus();
 	}
 	else if (/\d/.test(element.value))
 	{
+		// If field contains digit alert user.
 		inputStatus(element, "error", "Error: contains digit");
 	}
 	else {
@@ -180,28 +205,46 @@ function checkForText(element) {
 	}
 }
 
+/*************************************************************************
+ * CHECKBOX SETTINGS
+ * This function sets listeners on the checkboxes to listen for a 
+ * onchange. When a checkbox changes it updates the total.
+ *************************************************************************/
 function checkboxSettings() {
 	var sum = 0;
 	
+	// Get all checkboxes.
 	var checkboxes = document.forms[0]["product"];
 
 	for (var i = 0; i < checkboxes.length; i++) {
 		
+		// Check for change on each checkbox.
 		checkboxes[i].addEventListener("change", function () {
 
+			// Get all checkboxes that are selected.
 			var curr_checkboxes = $("[name*=product]:checked");
 
+			// Sum the value of selected checkboxes.
 			for (var i = 0; i < curr_checkboxes.length; i++) {
 				sum += curr_checkboxes[i].value * 1;
 			}
 
+			// Update Total
 			changeContent($(".price")[0], "$" + sum);
+
+			// Set sum back to 0.
 			sum = 0;
 
 		});
 	}
 }
 
+/*************************************************************************
+ * RADIO SETTINGS
+ * This function sets listeners on the radio buttons to listen for a 
+ * onchange. When a radio button is selected we update the credit type
+ * message field.
+ *************************************************************************/
 function radioSettings() {
 	var cardTypes = $("[name*=credit-type]");
 	var message = $(".credit-provider .block-message")[0];
@@ -214,6 +257,10 @@ function radioSettings() {
 	}	
 }
 
+/*************************************************************************
+ * AUTOFILL SETTINGS
+ * This autofills the personal information in the form.
+ *************************************************************************/
 function autoFillSettings() {
 	$("#first")[0].value = "Ritchie";
 	$("#last")[0].value = "Fitzgerald";
@@ -223,10 +270,17 @@ function autoFillSettings() {
 	$("#card-number")[0].value = "3452137896574532";
 }
 
+/*************************************************************************
+ * VALIDATE
+ * This validates the fields to be sure there are no errors before we
+ * submit.
+ *************************************************************************/
 function validate() {
 
+	// Grab all text fields
 	var textInputs = $("[type*=text], textarea");
 
+	// Make sure text fields are not empty.
 	for (var i = 0; i < textInputs.length; i++) {
 		if (textInputs[i].value == "")
 		{
@@ -236,6 +290,7 @@ function validate() {
 		}
 	}
 
+	// Make sure they selected a credit card type.
 	if ($("[name*=credit-type]:checked").length < 1) {
 		var firstType = $("[name*=credit-type]")[0];
 		var message = $(".credit-provider .block-message")[0];
@@ -244,6 +299,11 @@ function validate() {
 		changeContent(message, "Error: must choose type");
 		firstType.focus();
 
+		return false;
+	}
+
+	// Make sure there are no errors.
+	if ($(".error").length > 0) {
 		return false;
 	}
 
