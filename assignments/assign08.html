@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment #8</title>
+	<title>AJAX</title>
 	<link rel="stylesheet" href="../css/template.css" />
+	<script src="../js/assign08.js"></script>
 </head>
-<body>
+<body onload="main();">
 	<div class="body-wrapper">
-		<p>Assignment #8</p>
+		<div class="module">
+			<h1 class="center">AJAX Tester</h1>
+			<div class="group">
+				<div class="horizontal">
+					<label for="country">Select Country:</label>
+					<br />
+					<select name="country" id="country" onchange="loadCountry(this);">
+						<option value="default">Select Country</option>
+						<option value="usa.txt">United States</option>
+						<option value="canada.txt">Canada</option>
+						<option value="mexico.txt">Mexico</option>
+						<option value="russia.txt">Russia</option>
+					</select>
+				</div>
+			</div> <!-- end of group -->
+			<div id="country-data"></div>
+		</div>
+		<div class="module">
+			<div class="group">
+				<div class="horizontal">
+					<label for="">Enter text or url:</label>
+					<input type="text" onchange="loadUrl(this);">
+				</div>
+			</div>
+			<hr />
+			<div id="webpage"></div>
+		</div>
 	</div> <!-- end of body-wrapper -->
 </body>
 </html>

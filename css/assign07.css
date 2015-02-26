@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+
+body {
+	background: url(../images/bs-bg3.jpg) no-repeat fixed center;
+	background-size: cover;
+	font-family: "Sanchez", sans-serif;
+}
+
+h2 {
+	margin: 45px 0 0;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 30px auto;
+}
+
+h2+table {
+	margin: 20px auto;
+}
+
+caption {
+	margin: 0 0 20px;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+th,
+td {
+	padding: 7px 10px 5px;
+	border-bottom: 1px solid #000000;
+}
+
+th {
+	font-size: 18px;
+}
+
+
+.wrapper {
+	width: 1200px;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	display: block;
+	margin: 0 auto;
+}
+
+.container {
+	background: rgba(255, 255, 255, 0.94) url(../images/bs-logo.png) center no-repeat;
+	padding: 15px;
+}
+
+.center {
+	text-align: center;
+}
