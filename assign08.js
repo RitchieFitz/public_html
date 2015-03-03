@@ -49,6 +49,11 @@
  	var populations = [];
 
  	for (i in data) {
+
+		if (data[i] == "") {
+			continue;
+		}
+
  		if ( i % 2 == 0) {
  			cities.push(data[i].trim());
  		}
@@ -154,8 +159,7 @@ function loadCountry(element)
 	}
 	else 
 	{
-		// var destination = "http://157.201.194.254/~ercanbracks/" + country;
-		var destination = "/files/" + country;
+		var destination = "http://157.201.194.254/~ercanbracks/" + country;
 		loadFile(destination, "#country-data");
 	}
 }

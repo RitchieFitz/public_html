@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment #10</title>
+	<title>Android Central</title>
 	<link rel="stylesheet" href="../css/template.css" />
+	<link rel="stylesheet" href="../css/assign05.css" />
+	<script src="../js/assign10.js"></script>
 </head>
-<body>
+<body onload="main();">
 	<div class="body-wrapper">
-		<p>Assignment #10</p>
-	</div> <!-- end of body-wrapper -->
+		<div class="module">
+			<h1 class="center">Android Central</h1>
+			<form action="assign10.php" method="POST" onreset="clearChecks();" onsubmit="return validate();">
+				<div class="group horizontal">
+					<div class="details">
+						<h2>Shipping/Billing Information</h2>
+						<div class="input-group">
+							<label for="first">First Name:</label>
+							<input name="first" onchange="checkForText(this);" type="text" id="first" maxlength="18" placeholder="ex. John" />
+							<span class="message"></span>
+						</div>
+						<div class="input-group">
+							<label for="last">Last Name:</label>
+							<input name="last" onchange="checkForText(this);" type="text" id="last" maxlength="25" placeholder="ex. Smith"/>
+							<span class="message"></span>
+						</div>
+						<div class="input-group textbox">
+							<label for="address">Address:</label>
+							<textarea name="address" id="address" onchange="checkTextarea(this);" cols="30" rows="10"></textarea>
+							<span class="message"></span>
+						</div>
+						<div class="input-group">
+							<label for="phone">Phone:</label>
+							<input name="phone" onblur="checkPhone(this);" type="text" id="phone" maxlength="12" placeholder="ex. 123-456-7890"/>
+							<span class="message"></span>
+						</div>
+						<div class="group credit-provider">
+							<label for="credit">Credit Provider:</label>
+							<br />
+							<div class="horizontal">
+								<input type="radio" name="credit-type" value="Visa" /> Visa <br />
+								<input type="radio" name="credit-type" value="Mastercard" /> Mastercard <br />
+								<input type="radio" name="credit-type" value="American Express" /> American Express <br />
+								<span class="block-message"></span>
+							</div>
+						</div>
+						<div class="input-group">
+							<label for="card-number">Card Number:</label>
+							<input name="card-number" onchange="checkCard(this);" type="text" id="card-number" maxlength="16" placeholder="ex. 1234567890123456"/>
+							<span class="message"></span>
+						</div>
+						<div class="group">
+							<label for="job-type">Expiration Date:</label>
+							<br />
+							<select name="month" id="month">
+								<!-- <option value="1">1</option> -->
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<select name="year" id="year">
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+							</select>
+						</div>
+					</div> <!-- end of details -->
+					<div class="product-table">
+						<table>
+							<caption>Products</caption>
+							<thead>
+								<tr>
+									<th>Item</th>
+									<th>Cost</th>
+									<th>Add to Cart</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Motorola Droid Bionic</td>
+									<td>$440</td>
+									<td><input type="checkbox" name="product[]" value="Motorola Droid Bionic::440"></td>
+								</tr>
+								<tr>
+									<td>HTC 3D EVO</td>
+									<td>$360</td>
+									<td><input type="checkbox" name="product[]" value="HTC 3D EVO::360"></td>
+								</tr>
+								<tr>
+									<td>Droid Razzor Max</td>
+									<td>$300</td>
+									<td><input type="checkbox" name="product[]" value="Droid Razzor Max::300"></td>
+								</tr>
+								<tr>
+									<td>Samsung Galaxy 2</td>
+									<td>$540</td>
+									<td><input type="checkbox" name="product[]" value="Samsung Galaxy 2::540"></td>
+								</tr>
+								<tr>
+									<td>Samsung Nexus</td>
+									<td>$400</td>
+									<td><input type="checkbox" name="product[]" value="Samsung Nexus::400"></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="total-group">
+							<span class="total">Total: </span>
+							<span class="price">$0</span>
+						</div>
+					</div> <!-- end of product table -->
+				</div> <!-- end of group -->
+				<div class="center">
+					<input id="reset" type="reset" value="Clear Form" />
+					<input id="submit" type="submit" value="Submit" />
+					<input id="autofill" type="button" onclick="autoFillSettings();" value="Auto Fill" />
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

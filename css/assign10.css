@@ -1,0 +1,38 @@
+.transaction {
+	width: 500px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.transaction h2 {
+	border-bottom: 3px dashed #000;
+	margin-bottom: 15px;
+}
+
+.transaction p {
+	margin: 5px 0;
+}
+
+.label {
+	display: inline-block;
+	width: 140px;
+	font-weight: 900;
+}
+
+.products {
+	margin-bottom: 40px;
+}
+
+.products .label {
+	width: 180px;
+}
+
+.transaction .total {
+	border-top: 1px dashed #000;
+	padding-top: 10px;
+	margin-top: 15px;
+}
+
+.price {
+	color: #5EA862;
+}

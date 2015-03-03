@@ -1,0 +1,40 @@
+.body-wrapper {
+	width: 1226px;
+}
+
+.horizontal label {
+	width: 130px;
+}
+
+table {
+	display: inline-block;
+	margin: 40px 0 0px;
+}
+
+#country-data th:nth-of-type(odd),
+#country-data td:nth-of-type(odd) {
+	text-align: left;
+	padding: 3px 15px 3px 3px;
+}
+
+#country-data th:nth-of-type(even),
+#country-data td:nth-of-type(even) {
+	text-align: right;
+	padding: 3px 3px 3px 15px;
+}
+
+#country-data td {
+	border: 1px solid #000;
+}
+
+td {
+	padding: 10px 15px;
+}
+
+input[type=text] {
+	width: 500px;
+}
+
+#webpage {
+	text-align: center;
+}

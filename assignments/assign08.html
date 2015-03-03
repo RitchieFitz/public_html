@@ -3,6 +3,7 @@
 <head>
 	<title>AJAX</title>
 	<link rel="stylesheet" href="../css/template.css" />
+	<link rel="stylesheet" href="../css/assign08.css" />
 	<script src="../js/assign08.js"></script>
 </head>
 <body onload="main();">
@@ -12,7 +13,6 @@
 			<div class="group">
 				<div class="horizontal">
 					<label for="country">Select Country:</label>
-					<br />
 					<select name="country" id="country" onchange="loadCountry(this);">
 						<option value="default">Select Country</option>
 						<option value="usa.txt">United States</option>
@@ -27,8 +27,10 @@
 		<div class="module">
 			<div class="group">
 				<div class="horizontal">
-					<label for="">Enter text or url:</label>
+				<p>Use this: http://157.201.194.254/~ercanbracks/json.txt</p>
+					<label for="">Enter Url:</label>
 					<input type="text" onchange="loadUrl(this);">
+					<button class="button" onclick="loadUrl(this.previousSibling);">Get Data</button>
 				</div>
 			</div>
 			<hr />
