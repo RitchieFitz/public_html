@@ -75,6 +75,9 @@
 	{
 		changeContent(messages[i], "");
 	}
+
+	// Clears whatever value was in the Monthly Payment section.
+	changeContent($("#payment")[0], "");
 }
 
 /*************************************************************************
@@ -220,27 +223,38 @@ function checkUpdate()
 	checkUpdate();
 }
 
- function getPayment()
- {
+/**
+ * GET PAYMENT
+ * This creates an AJAX request to get the calculated monthly payment.
+ */
+function getPayment()
+{
 	var xmlhttp = new XMLHttpRequest();
+
+	// Link to C++ file
 	var url = "http://157.201.194.254/cgi-bin/fit07003/assign09";
+
+	// Use this to build our GET query.
 	var query = "";
+
+	// Get the values from the form.
 	var apr = $("#apr")[0].value;
 	var loanTerm = $("#loan-term")[0].value;
 	var loanAmount = $("#loan-amount")[0].value;
 
+	// Build Query.
 	query += "?apr=" + apr + "&loan-term=" + loanTerm + "&loan-amount=" + loanAmount;
-
-	console.log(url + query);
 
 	xmlhttp.onreadystatechange = function()
 	{
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
 		{
+			// If everything worked correctly update payment form.
 			var monthlyPayment = xmlhttp.responseText;
 			changeContent($("#payment")[0], "$" + monthlyPayment);
 		}
 		else {
+			// Else print to the console there was an error.
 			console.log("Failed!! URL: " + url + query);
 		}
 	}
