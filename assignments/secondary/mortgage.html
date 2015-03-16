@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mortgage Calculator</title>
+	<link rel="stylesheet" href="../../css/template.css" />
+	<link rel="stylesheet" href="../../css/assign04.css" />
+	<link rel="stylesheet" href="../../css/assign09.css" />
+	<script src="../../js/assign09.js"></script>
+</head>
+<body onload="main()">
+	<div class="body-wrapper">
+		<div class="module">
+			<h1>Mortgage Calculator</h1>
+			<!-- <form action="http://157.201.194.254/cgi-bin/fit07003/assign09" method="GET" onreset="clearChecks()"> -->
+			<form action="" onreset="clearChecks()">
+				<div class="group horizontal">
+					<div class="input-group">
+						<label for="apr">APR:</label>
+						<input onchange="checkInput(this)" type="text" name="apr" id="apr" maxlength="5" placeholder="ex. 3.45" />
+						<span class="message"></span>
+					</div>
+					<div class="input-group">
+						<label for="email">Loan Term:</label>
+						<input onchange="checkInput(this)" type="text" name="loan-term" id="loan-term" maxlength="2" placeholder="ex. 30"/>
+						<span class="message"></span>
+					</div>
+					<div class="input-group">
+						<label for="loan-amount">Loan Amount:</label>
+						<input onchange="checkInput(this)" type="text" name="loan-amount" id="loan-amount" placeholder="ex. 100000" />
+						<span class="message"></span>
+					</div>
+					<label for="payment">Monthly Payment:</label>
+					<div class="success" id="payment"></div>
+					<br />
+				</div>
+				<div class="center">
+					<input id="reset" type="reset" value="Clear Form" />
+					<input id="calc"  type="button" onclick="update()" value="Calculate Payment" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

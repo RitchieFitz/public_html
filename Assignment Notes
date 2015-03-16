@@ -1,0 +1,20 @@
+Assignment Notes
+-----------------------------
+
+Assignment 9
+---------------------------------
+	Both parts are not related. Link to C++ page and link to php page.
+
+	C++ Part
+	-----------------------------
+	<form action="http://157.201.194.254/cgi-bin/fit07003/assign09">
+
+	#include <cstdlib>
+	string query = getenv("QUERY_STRING");
+
+	cout << "Content-type: text/html \n\n";
+
+	PHP Part
+	-----------------------------
+	Use this first.
+	header("Content-type: text/xml \n\n");
