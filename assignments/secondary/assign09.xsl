@@ -8,10 +8,13 @@
 				<link rel="stylesheet" type="text/css" href="../../css/template.css" />
 				<link rel="stylesheet" type="text/css" href="../../css/assign09.css" />
 			</head>
-			<body>
+			<body class="xml-assign">
 				<div class="body-wrapper">
-					<div class="module xml-assign">
-						<h1>BYU-I Students</h1>
+					<div class="module">
+						<!-- <h1>BYU-I Students</h1> -->
+						<img class="byui-logo left-logo" src="../../images/byu-i-logo.png" alt=""/>
+						<img class="byui-logo right-logo" src="../../images/byu-i-logo.png" alt=""/>
+						<h1 class="center">Brigham Young University - Idaho</h1>
 						<div class="center">
 							<table>
 								<caption>Student List</caption>

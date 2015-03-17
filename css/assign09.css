@@ -4,12 +4,23 @@
 	font-weight: bold;
 }
 
-.module.xml-assign {
+body.xml-assign {
+	background: url(../images/byui-background.jpeg) no-repeat center fixed;
+	background-size: cover;
+}
+
+.xml-assign .body-wrapper {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.xml-assign .module {
 	width: 92%;
+	background: rgba(255, 255, 255, 0.96);
 }
 
 .xml-assign table {
 	display: inline-block;
+	/*background: url(../images/byu-i-logo.png) no-repeat center;*/
 }
 
 .xml-assign th,
@@ -20,4 +31,11 @@
 .xml-assign td {
 	font-size: 14px;
 	border: 1px solid #222;
+}
+
+.byui-logo.right-logo {
+	float: right;
+}
+.byui-logo.left-logo {
+	float: left;
 }
