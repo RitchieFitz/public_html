@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-mail</title>
+	<link rel="stylesheet" href="css/template.css" />
+</head>
+<body>
+	<div class="body-wrapper">
+		<div class="module">
+			<h1 class="center">Send Email</h1>
+			<form action="email.php" method="GET">
+				<label for="to">To:</label>
+				<input type="text" id="to" name="to">
+				<br>
+				<label for="from">From:</label>
+				<input type="text" id="from" name="from">
+				<br>
+				<label for="subject">Subject:</label>
+				<input type="text" id="subject" name="subject">
+				<br>
+				<label for="message">Message:</label>
+				<input type="text" id="message" name="message">
+				<br>
+				<div class="center">
+					<input type="reset" value="Clear Form">
+					<input type="submit" value="Send Message">
+				</div>
+			</form>
+		</div>
+	</div> <!-- end of body-wrapper -->
+</body>
+</html>

@@ -3,10 +3,69 @@
 <head>
 	<title>Assignment #11</title>
 	<link rel="stylesheet" href="../css/template.css" />
+	<link rel="stylesheet" href="../css/assign11.css" />
+	<script type="text/javascript" src="../js/assign11.js"></script>
 </head>
-<body>
+<body onload="main();">
 	<div class="body-wrapper">
-		<p>Assignment #11</p>
+	<div class="module block">
+		<h1 class="center">Mileage Calculator</h1>
+	</div>
+		<div class="module calculate">
+			<h1 class="center">Calculate Mileage</h1>
+			<form action="">
+				<div class="horizontal">
+					<div class="input-group">
+						<label for="startCity">Start City: </label>
+						<input type="text" name="startCity" id="startCity" onchange="checkForText(this);">
+						<span class="message"></span>
+					</div>
+					<div class="input-group">
+						<label for="startState">Start State: </label>
+						<input type="text" name="startState" id="startState" maxlength="2" onchange="checkForText(this);">
+						<span class="message"></span>
+					</div>
+					<div class="input-group">
+						<label for="endCity">End City: </label>
+						<input type="text" name="endCity" id="endCity" onchange="checkForText(this);">
+						<span class="message"></span>
+					</div>
+					<div class="input-group">
+						<label for="endState">Start City: </label>
+						<input type="text" name="endState" id="endState" maxlength="2" onchange="checkForText(this);">
+						<span class="message"></span>
+					</div>
+				</div> <!-- end of horizontal -->
+				<div class="submit center">
+					<input id="reset" type="reset" value="Clear Form" onclick="clearChecks();">
+					<input type="button" value="Get Mileage" onclick="update();" >
+				</div>
+			</form>
+		</div> <!-- end of module -->
+		<div class="module calculated">
+			<h1 class="center">Calculated Mileage</h1>
+			<div class="display-mileage">
+				<div class="points">
+					<div class="start-point">
+						<h2>Start Point</h2>
+						<label>Start City: </label><span id="startCityV"></span>
+						<br>
+						<label>Start State: </label><span id="startStateV"></span>
+					</div>
+					<div class="end-point">
+						<h2>End Point</h2>
+						<label>End City: </label><span id="endCityV"></span>
+						<br>
+						<label>End State: </label><span id="endStateV"></span>
+						<br>
+						<label>Travel By: </label><span id="modesV"></span>
+					</div>
+				</div> <!-- end of points -->
+				<div class="center">
+					<span id="milesV"></span>
+				</div>
+			</div>
+		</div>
 	</div> <!-- end of body-wrapper -->
 </body>
 </html>

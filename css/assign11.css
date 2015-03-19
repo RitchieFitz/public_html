@@ -1,0 +1,82 @@
+.body-wrapper {
+	width: 1200px;
+}
+
+form {
+	position: relative;
+}
+
+.message {
+	position: absolute;
+	top: 11px;
+	font-size: 14px;
+}
+
+.error-input {
+	border: 2px solid #FF0000;
+}
+.error {
+	color: #FF0000;
+}
+.success-input {
+	border: 2px solid #5EA862;
+}
+.success {
+	color: #5EA862;
+}
+
+.calculate {
+	width: 41%;
+}
+
+.calculated {
+	width: 42.6%;
+}
+
+.input-group {
+	position: relative;
+	display: inline-block;
+}
+
+.submit {
+	margin: 25px 0 0;
+}
+
+.start-point {
+	width: 48%;
+	display: inline-block;
+}
+
+.end-point {
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+	margin-left: 3%;
+}
+
+.points label {
+	width: 100px;
+	display: inline-block;
+}
+
+.points,
+.points h2 {
+	border-bottom: 3px dashed #000000;
+}
+
+.points {
+	padding-bottom: 13px;
+	margin-bottom: 20px;
+}
+
+#modesV {
+	display: inline-block;
+	width: 58%;
+	vertical-align: top;
+}
+
+#milesV {
+	color: #5EA862;
+	font-size: 25px;
+	font-weight: 900;
+}
