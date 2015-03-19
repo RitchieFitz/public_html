@@ -223,29 +223,58 @@ function checkUpdate()
 	checkUpdate();
 }
 
+/**
+ * GET XML DATA
+ * This will select the XML element we want by tagname and return the
+ * content contained in the element.
+ * 
+ * @param  {[XML DOC]} xmlDoc   The XML document we want to pull data from.
+ * @param  {[String]}  tagName  The tag name of the element we want.
+ * @param  {[boolean]} multiple Tells us to grab an array of data.
+ * @return {[string]}                   the content of the element.
+ * @return {[array of string]}          an array of strings containing content.
+ */
 function getXmlData(xmlDoc, tagName, multiple)
 {
+	// Check if we need to grab multiple values or not.
 	if (multiple)
 	{
 		var valueArray = [];
+
+		// Get the array of elements.
 		var elementArray = xmlDoc.getElementsByTagName(tagName);
 
+		// Loop through and push the new content onto the array.
 		for (var i = 0; i < elementArray.length; i++)
 		{
 			valueArray[i] = elementArray[i].childNodes[0].nodeValue;
 		}
 
+		// Return an array of strings containing the elements contents.
 		return valueArray;
 
 	}
 	else
 	{
+		// Return the content from the matching code name.
 		return xmlDoc.getElementsByTagName(tagName)[0].childNodes[0].nodeValue;
 	}
 }
 
-function buildMileageDiv(startCity, startState, endCity, endState, miles, modes)
+/**
+ * DISPLAY DATA
+ * This adds the data to the html document so the user can see the data.
+ * 
+ * @param  {[String]} startCity  The value of startCity.
+ * @param  {[String]} startState The value of startState.
+ * @param  {[String]} endCity    The value of endCity.
+ * @param  {[String]} endState   The value of endState.
+ * @param  {[String]} miles      The value of miles.
+ * @param  {[Array]}  modes      The value of modes.
+ */
+function displayData(startCity, startState, endCity, endState, miles, modes)
 {
+	// Output values to correct places.
 	changeContent($("#startCityV")[0], startCity);
 	changeContent($("#startStateV")[0], startState);
 	changeContent($("#endCityV")[0], endCity);
@@ -254,6 +283,11 @@ function buildMileageDiv(startCity, startState, endCity, endState, miles, modes)
 	changeContent($("#milesV")[0], miles + " Miles");
 }
 
+/**
+ * GET MILEAGE
+ * This function sends a query to the mileage program and when we get the results
+ * back we send them to displayData() so that the user can see the data.
+ */
 function getMileage()
 {
 	var xmlhttp = new XMLHttpRequest();
@@ -272,37 +306,15 @@ function getMileage()
 
 	// Build Query.
 	query += "?startCity=" + startCity + "&startState=" + startState + "&endCity=" + endCity + "&endState=" + endState;
-
-	console.log("Query Url: " + url + query);
-
-	// Uncomment to test locally
-	// var resultXML = "";
-	// resultXML += "<trip>";
-	// resultXML += "<startcity>Miami</startcity>";
-	// resultXML += "<startstate>FL</startstate>";
-	// resultXML += "<endcity>Chicago</endcity>";
-	// resultXML += "<endstate>IL</endstate>";
-	// resultXML += "<miles>1377</miles>";
-	// resultXML += "<tmode>Plane</tmode>";
-	// resultXML += "<tmode>Car</tmode>";
-	// resultXML += "<tmode>Bus</tmode>";
-	// resultXML += "<tmode>Bike</tmode>";
-	// resultXML += "<tmode>Foot</tmode>";
-	// resultXML += "</trip>";
-
-	// This will all be in the ajax if statement.
-	// -------------------------------------------
 	
 	xmlhttp.onreadystatechange = function()
 	{
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
 		{
-			var parser = new DOMParser();
-			// var xmlDoc = parser.parseFromString(resultXML,"text/xml"); // Uncomment to test locally
+			// Get data back as XML
 			var xmlDoc = xmlhttp.responseXML;
-			// var xmlDoc = parser.parseFromString(xmlhttp.responseXML,"text/xml");
-			console.log(xmlDoc.getElementsByTagName("startcity")[0].innerHtml);
 
+			// Get values for each variable.
 			var startCityV = getXmlData(xmlDoc, "startcity", false);
 			var startStateV = getXmlData(xmlDoc, "startstate", false);
 			var endCityV = getXmlData(xmlDoc, "endcity", false);
@@ -310,23 +322,13 @@ function getMileage()
 			var milesV = getXmlData(xmlDoc, "miles", false);
 			var modesV = getXmlData(xmlDoc, "tmode", true);
 
-			console.log("startCityV: " + startCityV);
-			console.log("startStateV: " + startStateV);
-			console.log("endCityV: " + endCityV);
-			console.log("endStateV: " + endStateV);
-			console.log("milesV: " + milesV);
-			console.log("modesV: " + modesV);
-
-			buildMileageDiv(startCityV, startStateV, endCityV, endStateV, milesV, modesV);
+			// Display the data.
+			displayData(startCityV, startStateV, endCityV, endStateV, milesV, modesV);
 		}
 	}
-	xmlhttp.open("GET","ajax_info.txt",true);
+
+	xmlhttp.open("GET", url + query, true);
 	xmlhttp.send();
-
-	// -------------------------------------------
-	// var resultXML = xmlhttp.responseXML;
-	// var finalResult = parseXml(resultXML); // TODO RIGHT HERE
-
 }
 
 /*************************************************************************
