@@ -5,82 +5,90 @@
 	<link rel="stylesheet" href="../css/assign12.css" />
 	<script src="../js/assign12.js"></script>
 </head>
-<body onload="main()">
+<body onload="main();">
 	<div class="body-wrapper">
 		<div class="body-container">
-			<h1 class="center">Piano Festival</h1>
-			<h2>Register</h2>
-			<form action="assign12.php" method="POST" onsubmit="validate()" onreset="clearChecks()">
-				<div class="horizontal">
-					<div class="section first">
-						<div class="group">
-							<label for="type">Type: </label>
-							<select name="type" id="type">
-								<option value="solo">Solo</option>
-								<option value="duet">Duet</option>
-								<option value="concerto">Concerto</option>
-							</select>
-							<span class="message"></span>
-						</div>
-						<div class="first-student">
-							<label for="first_name_1">First Name:</label>
-							<input type="text" name="first_name_1" id="first_name_1" />
+			<div class="register">
+				<h1 class="center">Piano Festival</h1>
+				<h2>Register</h2>
+				<form onreset="clearChecks()">
+					<div class="horizontal">
+						<div class="section first">
+							<div class="group">
+								<label for="type">Type: </label>
+								<select name="type" id="type">
+									<option value="solo">Solo</option>
+									<option value="duet">Duet</option>
+									<option value="concerto">Concerto</option>
+								</select>
+								<span class="message"></span>
+							</div>
+							<div class="first-student">
+								<label for="first_name_1">First Name:</label>
+								<input type="text" name="first_name_1" id="first_name_1" onchange="checkForText(this);">
+								<span class="message"></span>
+								<br>
+								<label for="last_name_1">Last Name:</label>
+								<input type="text" name="last_name_1" id="last_name_1" onchange="checkForText(this);">
+								<span class="message"></span>
+								<br>
+								<label for="student_id_1">Student ID:</label>
+								<input type="text" name="student_id_1" id="student_id_1" onchange="checkForText(this);">
+								<span class="message"></span>
+							</div> <!-- end of first student -->
+							<div class="second-student"></div>
+						</div> <!-- end of first section -->
+						<div class="section second">
+							<div class="group">
+								<label for="skill_level">Skill Level:</label>
+								<div class="align-top">
+									<input type="radio" name="skill_level" value="Beginner" checked="checked" /> Beginner <br>
+									<input type="radio" name="skill_level" value="Intermediate" /> Intermediate <br>
+									<input type="radio" name="skill_level" value="Pre-advanced" /> Pre-advanced <br>
+									<input type="radio" name="skill_level" value="Advanced" /> Advanced <br>
+								</div>
+								<span class="message"></span>
+							</div>
+						</div> <!-- end of second section -->
+						<div class="section third">
+							<label for="location">Location:</label>
+							<input type="text" name="location" id="location" placeholder="Snow, Austin, etc." onchange="checkForText(this);">
 							<span class="message"></span>
 							<br>
-							<label for="last_name_1">Last Name:</label>
-							<input type="text" name="last_name_1" id="last_name_1" />
+							<label for="location">Room #:</label>
+							<input type="text" name="room"  id="room" placeholder="123, 231" onchange="checkForText(this);">
 							<span class="message"></span>
 							<br>
-							<label for="student_id_1">Student ID:</label>
-							<input type="text" name="student_id_1" id="student_id_1" />
+							<label for="time_slot">Time Slot:</label>
+							<input type="text" name="time_slot" id="time_slot" placeholder="8:45 AM, or 3:00 PM" onchange="checkForText(this);">
 							<span class="message"></span>
-						</div> <!-- end of first student -->
-					</div> <!-- end of first section -->
-					<div class="section second">
-						<div class="group">
-							<label for="skill_level">Skill Level:</label>
-							<div class="align-top">
-								<input type="radio" name="skill_level" value="beginner" /> Beginner <br>
-								<input type="radio" name="skill_level" value="intermediate" /> Intermediate <br>
-								<input type="radio" name="skill_level" value="pre-advanced" /> Pre-advanced <br>
-								<input type="radio" name="skill_level" value="advanced" /> Advanced <br>
+						</div> <!-- end of third section -->
+						<div class="section fourth">
+							<div class="group">
+								<label for="instrument">Instrument:</label>
+								<div class="align-top">
+									<input type="checkbox" name="instruments[]" value="piano" /> Piano <br>
+									<input type="checkbox" name="instruments[]" value="voice" /> Voice <br>
+									<input type="checkbox" name="instruments[]" value="string" /> String <br>
+									<input type="checkbox" name="instruments[]" value="organ" /> Organ <br>
+									<input type="checkbox" name="instruments[]" value="other" /> Other <br>
+								</div>
+								<span class="message"></span>
 							</div>
-							<span class="message"></span>
+						</div> <!-- end of fourth section -->
+						<div class="register group center">
+							<input type="reset" value="Clear Form">
+							<input id="register" type="button" value="Register" onclick="validate();">
+							<!-- <input type="submit" value="Register"> -->
+							<input id="auto-fill" type="button" value="Auto Fill" onclick="autoFill();">
 						</div>
-					</div> <!-- end of second section -->
-					<div class="section third">
-						<label for="location">Location:</label>
-						<input type="text" name="location" id="location" placeholder="Snow, Austin, etc.">
-						<span class="message"></span>
-						<br>
-						<label for="location">Room #:</label>
-						<input type="text" name="room"  id="room" placeholder="123, 231">
-						<span class="message"></span>
-						<br>
-						<label for="time_slot">Time Slot:</label>
-						<input type="text" name="time_slot" id="time_slot" placeholder="8:45 AM, or 3:00 PM">
-						<span class="message"></span>
-					</div> <!-- end of third section -->
-					<div class="section fourth">
-						<div class="group">
-							<label for="instrument">Instrument:</label>
-							<div class="align-top">
-								<input type="checkbox" name="instruments[]" value="piano" /> Piano <br>
-								<input type="checkbox" name="instruments[]" value="voice" /> Voice <br>
-								<input type="checkbox" name="instruments[]" value="string" /> String <br>
-								<input type="checkbox" name="instruments[]" value="organ" /> Organ <br>
-								<input type="checkbox" name="instruments[]" value="other" /> Other <br>
-							</div>
-							<span class="message"></span>
-						</div>
-					</div> <!-- end of fourth section -->
-					<div class="group center">
-						<input type="submit" value="Register">
-						<input type="reset" value="Clear Form">
-					</div>
-				</div> <!-- end of horizontal -->
-			</form>
-		</div>
+					</div> <!-- end of horizontal -->
+				</form>
+			</div> <!-- end of register -->
+			<div class="student-list">
+				
+			</div>
+		</div> <!-- end of body-container -->
 	</div> <!-- end of body-wrapper -->
 </body>
 </html>

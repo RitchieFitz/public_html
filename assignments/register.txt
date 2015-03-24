@@ -1,0 +1,12 @@
+solo::Ritchie::Fitzgerald::9834562829::Beginner::Austin::214::8:45 PM;;;piano::voice;;;1
+solo::Ritchie::Fitzgerald::9834562829::Beginner::Austin::214::8:45 PM;;;piano::voice;;;1
+solo::Ritchie::Fitzgerald::9834562829::Beginner::Austin::214::8:45 PM;;;piano::voice::string;;;1
+solo::Ritchie::Fitzgerald::9834562829::Beginner::Austin::214::8:45 PM;;;piano::voice;;;1
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Beginner::Austin::214::8:45 PM;;;voice::string;;;2
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Beginner::Austin::214::8:45 PM;;;piano::voice;;;2
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Beginner::Austin::214::8:45 PM;;;piano::voice::string::organ::other;;;2
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Beginner::Austin::214::8:45 PM;;;piano::voice::string::organ::other;;;2
+concerto::Ritchie::Fitzgerald::9834562829::Advanced::Austin::214::8:45 PM;;;voice;;;1
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Pre-advanced::Austin::214::8:45 PM;;;piano::voice;;;2
+solo::Ritchie::Fitzgerald::9834562829::Beginner::Austin::214::8:45 PM;;;piano::voice;;;1
+duet::Ritchie::Fitzgerald::9834562829::Hannah::Walker::345234578::Intermediate::Austin::214::8:45 PM;;;piano::voice;;;2
